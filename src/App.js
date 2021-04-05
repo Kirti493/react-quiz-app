@@ -7,11 +7,15 @@ const API_URL =
 export default function App() {
   return (
     <div className="container">
-      <div>This is where we're going to have the question.</div>
-      <div>Answer 1</div>
-      <div>Answer 2</div>
-      <div>Answer 3</div>
-      <div>Answer 4</div>
+      <div className="bg-white text-purple-800 p-10 rounded-lg shadow-md">
+        <h2 className="text-2xl">
+          This is where we're going to have the question.
+        </h2>
+      </div>
+      <button className="bg-white w-1/2 p-4 text-purple-800">Answer 1</button>
+      <button className="bg-white w-1/2 p-4 text-purple-800">Answer 2</button>
+      <button className="bg-white w-1/2 p-4 text-purple-800">Answer 3</button>
+      <button className="bg-white w-1/2 p-4 text-purple-800">Answer 4</button>
     </div>
   );
 }
