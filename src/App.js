@@ -12,10 +12,20 @@ export default function App() {
           This is where we're going to have the question.
         </h2>
       </div>
-      <button className="bg-white w-1/2 p-4 text-purple-800">Answer 1</button>
-      <button className="bg-white w-1/2 p-4 text-purple-800">Answer 2</button>
-      <button className="bg-white w-1/2 p-4 text-purple-800">Answer 3</button>
-      <button className="bg-white w-1/2 p-4 text-purple-800">Answer 4</button>
+      <div className="flex flex-wrap mt-4 justify-around">
+        <button className="bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4">
+          Answer 1
+        </button>
+        <button className="bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4">
+          Answer 2
+        </button>
+        <button className="bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4">
+          Answer 3
+        </button>
+        <button className="bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4">
+          Answer 4
+        </button>
+      </div>
     </div>
   );
 }
