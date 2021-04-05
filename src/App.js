@@ -9,7 +9,7 @@ export default function App() {
     <div className="container">
       <div className="bg-white text-purple-800 p-10 rounded-lg shadow-md">
         <h2 className="text-2xl">
-          This is where we're going to have the question.
+          1. This is where we're going to have the question.
         </h2>
       </div>
       <div className="flex flex-wrap mt-4 justify-around">
