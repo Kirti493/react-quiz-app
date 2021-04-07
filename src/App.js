@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 
 const API_URL =
@@ -6,27 +6,37 @@ const API_URL =
 
 export default function App() {
   const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(data => {
+        setQuestions(data.results);
+      });
+  }, []);
+
   return (
     <div className="container">
+     {questions.length > 0 &&  }
+    
       <div className="bg-white text-purple-800 p-10 rounded-lg shadow-md">
-        <h2 className="text-2xl">
-          1. This is where we're going to have the question.
-        </h2>
+        <h2 className="text-2xl">{questions[0].question}</h2>
       </div>
       <div className="grid grid-cols-2 gap-6 mt-6">
         <button className="bg-white p-4 text-purple-800 font-semibold rounded shadow">
-          Answer 1
+          {questions[0].correct_answer}
         </button>
         <button className="bg-white p-4 text-purple-800 font-semibold rounded shadow">
-          Answer 2
+          {questions[0].incorrect_answer[0]}
         </button>
         <button className="bg-white p-4 text-purple-800 font-semibold rounded shadow">
-          Answer 3
+          {questions[0].incorrect_answer[1]}
         </button>
         <button className="bg-white p-4 text-purple-800 font-semibold rounded shadow">
-          Answer 4
+          {questions[0].incorrect_answer[2]}
         </button>
       </div>
+     
     </div>
   );
 }
