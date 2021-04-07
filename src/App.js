@@ -15,10 +15,8 @@ export default function App() {
       });
   }, []);
 
-  return (
+  return questions.length > 0 ? (
     <div className="container">
-     {questions.length > 0 &&  }
-    
       <div className="bg-white text-purple-800 p-10 rounded-lg shadow-md">
         <h2 className="text-2xl">{questions[0].question}</h2>
       </div>
@@ -27,16 +25,17 @@ export default function App() {
           {questions[0].correct_answer}
         </button>
         <button className="bg-white p-4 text-purple-800 font-semibold rounded shadow">
-          {questions[0].incorrect_answer[0]}
+          {questions[0].incorrect_answers[0]}
         </button>
         <button className="bg-white p-4 text-purple-800 font-semibold rounded shadow">
-          {questions[0].incorrect_answer[1]}
+          {questions[0].incorrect_answers[1]}
         </button>
         <button className="bg-white p-4 text-purple-800 font-semibold rounded shadow">
-          {questions[0].incorrect_answer[2]}
+          {questions[0].incorrect_answers[2]}
         </button>
       </div>
-     
     </div>
+  ) : (
+    <h1>Hey bro... we're loading!</h1>
   );
 }
