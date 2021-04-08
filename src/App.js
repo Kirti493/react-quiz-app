@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Questionaire } from "./components";
+import { Questionarie } from "./components";
 
 const API_URL =
   "https://opentdb.com/api.php?amount=10&category=14&difficulty=easy";
@@ -17,7 +17,7 @@ function App() {
 
   return questions.length > 0 ? (
     <div className="container">
-      <Questionaire data={questions[0]} />
+      <Questionarie data={questions[0]} />
     </div>
   ) : (
     <h2 className="text-2xl text-white font-bold">Loading....</h2>
