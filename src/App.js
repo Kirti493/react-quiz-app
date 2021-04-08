@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
+import { Questionaire } from "./components";
 
 const API_URL =
   "https://opentdb.com/api.php?amount=10&category=14&difficulty=easy";
 
-export default function App() {
+function App() {
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
@@ -17,8 +17,11 @@ export default function App() {
 
   return questions.length > 0 ? (
     <div className="container">
-
+      <Questionaire data={questions[0]} />
+    </div>
   ) : (
     <h2 className="text-2xl text-white font-bold">Loading....</h2>
   );
 }
+
+export default App;
